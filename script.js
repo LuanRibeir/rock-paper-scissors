@@ -8,7 +8,6 @@ function getRobotChoice() {
 // Plays a round, the Computer choice is optional, making the default a random result.
 function playRound(playerChoice, robotChoice = getRobotChoice()) {
 	playerChoice = playerChoice.toLowerCase();
-	robotChoice = robotChoice.toLowerCase();
 
 	const resultMsg = `Player |${playerChoice}| vs Robot |${robotChoice}|`;
 
