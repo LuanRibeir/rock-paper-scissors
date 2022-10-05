@@ -26,9 +26,30 @@ function playRound(playerChoice, robotChoice = getRobotChoice()) {
 
 // Plays a 5 round game.
 function game() {
+	let robotWins = 0,
+		playerWins = 0, // Keeps score.
+		draw = 0;
+
 	for (let i = 1; i <= 5; i++) {
-		alert(playRound(prompt()));
+		const playerChoice = prompt().toLowerCase();
+		const robotChoice = getRobotChoice();
+		const playMsg = playRound(playerChoice, robotChoice);
+
+		alert(playMsg);
+
+		// Stores result for later comparisons.
+		if (playerChoice == robotChoice) {
+			draw++;
+		} else if (playMsg.includes('Win')) {
+			playerWins++;
+		} else {
+			robotWins++;
+		}
 	}
+
+	// Reports a winner or loser at the end.
+	const result = playerWins > robotWins ? 'YOU WIN! :)' : 'YOU LOSE! :(';
+	alert(result);
 }
 
 game();
