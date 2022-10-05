@@ -23,3 +23,12 @@ function playRound(playerChoice, robotChoice=getRobotChoice()){
         return resultMsg + '\nYou Lose!';
     }
 }
+
+// Plays a 5 round game.
+function game(){
+    for (let i = 1; i<=5; i++) {
+        alert(playRound(prompt())); 
+    }
+}
+
+game();
