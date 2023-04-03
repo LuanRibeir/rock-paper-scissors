@@ -7,9 +7,9 @@ body {
 
 .container{
     text-align: center;
-    border: 3px red solid;
-    width: 100%;
-    height: 40%;
+    width: auto;
+    height: auto;
+    padding: 0px;
 }
 
 .container img {
@@ -19,10 +19,44 @@ body {
     height: 700px;
 }
 
+.screen-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    height: 80px;
+    top: 300px;
+    gap: 25px;
+}
+
+.screen-right,
+.screen-center,
+.screen-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 25px; 
+}
+
+.screen-container img {
+    position: relative;
+    z-index: 3;
+    width: auto;
+    height: 65px;
+} 
+
 .btn-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 3;
+    height: 80px;
+    top: 400px;
+    margin: 10px;
 }
 
 .btn-container button{
@@ -32,9 +66,7 @@ body {
     cursor: pointer;
     outline: none;
     position: relative;
-    z-index: 3;
-    height: 80px;
-    top: 400px;
+    z-index: 2;
     margin: 10px;
 }
 
@@ -45,7 +77,13 @@ body {
     height: 65px;
 }
 
-.rock-img {
+.rockBtn-img{
+    transform: scaleX(-1);
+}
+
+.screen-right .rock-img,
+.screen-right .paper-img,
+.screen-right .scissors-img{
     transform: scaleX(-1);
 }
 
