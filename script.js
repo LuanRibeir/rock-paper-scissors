@@ -24,14 +24,14 @@ function playRound(playerChoice, robotChoice = getRobotChoice()) {
 	}
 }
 
-// Plays a 3 round game.
+// Plays a 5 round game.
 function game() {
 	let robotWins = 0,
 		playerWins = 0, // Keeps score.
 		draw = 0,
 		over = false;
 
-	const placar = ["src/blank.png", "src/1.png", "src/2.png", "src/3.png"];  
+	const placar = ["src/blank.png", "src/1.png", "src/2.png", "src/3.png", "src/4.png", "src/blank.png"];  
 
 	const rockBtn =  document.getElementById("rockBtn");
 	const paperBtn =  document.getElementById("paperBtn");
@@ -94,14 +94,14 @@ function game() {
 		}
 
 		// Reports a winner or loser at the end.
-		if (robotWins >= 3){
+		if (robotWins >= 5){
 			placarPlayer.src = "src/lose.png";
 			placarMiddle.src =  "src/youlose.png";
 			placarBot.src = "src/lose.png";
 
 			over = true;
 
-		} else if(playerWins >= 3){
+		} else if(playerWins >= 5){
 			placarPlayer.src = "src/win.png";
 			placarMiddle.src =  "src/youwin.png";
 			placarBot.src = "src/win.png";	
